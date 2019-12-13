@@ -1,10 +1,12 @@
+// const.js
+
 // Primitive
 let a = 'a';
 a = 'b';
 a;
 
 const c = 'c';
-// c = "d";
+c = 'd'; // TypeError
 c;
 
 // Reference
@@ -19,5 +21,8 @@ e;
 const f = {
   foo: 'foo',
 };
+// f = {
+//   foo: 'bar',
+// }; TypeError
 f.foo = 'bar';
 f;

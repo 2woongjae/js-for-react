@@ -1,3 +1,5 @@
+// spread.js
+
 function sum(a, b, c) {
   return a + b + c;
 }
@@ -8,33 +10,25 @@ const numbers = [2, 3, 4];
 
 console.log(sum(...numbers));
 
-const num = {
-  a: 3,
-  b: 4,
-  c: 5,
-};
+//  1 레벨 깊이
+const obj = { a: 3, b: 4, c: 5 };
 
-const cloned = { ...num };
-cloned.a = 10;
+const cloned = { ...obj, a: 6 };
+cloned.c = 10;
 
-console.log(num);
-console.log(cloned); //  1 레벨 깊이
+console.log(obj, cloned);
 
-const deep = {
-  a: {
-    b: 100,
-  },
-};
+//  2 레벨 깊이
+const obj1 = { a: { b: 100 } };
 
-const deepCloned = { ...deep };
-deepCloned.a.b = 200;
+const obj1Cloned = { ...obj1 };
+obj1Cloned.a.b = 200;
 
-console.log(deep);
-console.log(deepCloned);
+console.log(obj1, obj1Cloned);
 
-function rest(...args) {
-  // function rest(name, ...args) {
-  console.log(args);
-}
+const obj2 = { a: { b: 100 } };
 
-rest('mark', 37, 'korea');
+const obj2Cloned = { ...obj2, a: { ...obj2.a } };
+obj2Cloned.a.b = 200;
+
+console.log(obj2, obj2Cloned);

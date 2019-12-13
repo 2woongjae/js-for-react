@@ -1,3 +1,5 @@
+// callback.js
+
 function foo(callback) {
   setTimeout(() => {
     // 로직

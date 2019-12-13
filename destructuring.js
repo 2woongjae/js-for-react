@@ -1,3 +1,5 @@
+// destructuring.js
+
 const foo = {
   a: '에이',
   b: '비이',

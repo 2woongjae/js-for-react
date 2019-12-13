@@ -1,3 +1,5 @@
+// promise.js
+
 function foo() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
